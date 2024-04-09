@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-30 05:25:56 "/>
+        <attribute name="created" value="YW5kcmU7TEFQVE9QLTg0UlVONTNWOzIwMjAtMTEtMzA7IjA1OjEyOjU3ICI7Mjc1OA=="/>
+        <attribute name="edited" value="YW5kcmU7TEFQVE9QLTg0UlVONTNWOzIwMjAtMTEtMzA7IjA1OjI1OjU2ICI7MTsyODY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Uno studente esamina le informazioni sulle verifiche scritte fatte; si desidera sapere quante sono le prove sufficienti."/>
+            <declare name="suff, N, voto, v" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <assign variable="suff" expression="0"/>
+            <for variable="V" start="1" end="N" direction="inc" step="1">
+                <input variable="voto"/>
+                <if expression="voto&gt;=6">
+                    <then>
+                        <assign variable="suff" expression="suff+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="suff" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

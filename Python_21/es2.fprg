@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-30 05:12:46 "/>
+        <attribute name="created" value="YW5kcmU7TEFQVE9QLTg0UlVONTNWOzIwMjAtMTEtMzA7IjA0OjQ4OjI4ICI7Mjc2NA=="/>
+        <attribute name="edited" value="YW5kcmU7TEFQVE9QLTg0UlVONTNWOzIwMjAtMTEtMzA7IjA1OjEyOjQ2ICI7MTsyODY0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Dati in input le misure dei lati di un triangolo determinare se il triangolo &#232; scaleno, equilatero o isoscele."/>
+            <declare name="scaleno, isoscele, equilatero" type="String" array="False" size=""/>
+            <declare name="l1, l2, l3" type="Real" array="False" size=""/>
+            <input variable="l1"/>
+            <input variable="l2"/>
+            <input variable="l3"/>
+            <if expression="&quot;l1&quot;=&quot;l2&quot;=&quot;l3&quot;">
+                <then>
+                    <output expression="equilatero" newline="True"/>
+                </then>
+                <else>
+                    <if expression="l1==l2 or l2==l3 or l1==l3">
+                        <then>
+                            <output expression="isoscele" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="scaleno" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

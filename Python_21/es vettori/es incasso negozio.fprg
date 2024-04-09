@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-22 03:50:09 "/>
+        <attribute name="created" value="YW5kcmU7TEFQVE9QLTg0UlVONTNWOzIwMjEtMDEtMjI7IjAzOjQxOjUwICI7Mjc1Mg=="/>
+        <attribute name="edited" value="YW5kcmU7TEFQVE9QLTg0UlVONTNWOzIwMjEtMDEtMjI7IjAzOjUwOjA5ICI7MTsyODY0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Calcolare l'icasso settimanale di un negozio dopo aver letto e memorizzato in una lista (vettore) l'incasso giornaliero."/>
+            <declare name="incasso, incassotot, g, x" type="Integer" array="False" size=""/>
+            <declare name="vettore" type="Integer" array="True" size="7"/>
+            <assign variable="incassotot" expression="0"/>
+            <assign variable="x" expression="0"/>
+            <for variable="g" start="1" end="7" direction="inc" step="1">
+                <output expression="&quot;incasso giornaliero&quot;" newline="True"/>
+                <input variable="incasso"/>
+                <assign variable="vettore[x]" expression="incasso"/>
+                <assign variable="x" expression="x+1"/>
+                <assign variable="incassotot" expression="incassotot+incasso"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

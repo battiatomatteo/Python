@@ -1,0 +1,29 @@
+prova 
+"""
+def lista():
+    """
+    """
+    inserisce 10 numeri interi in una lista
+    entrata: //
+    uscita: 1
+    """
+    """
+    numero = int(input("Inserisci un numero:  "))
+    if i == 0:
+        lista.append(numero)
+    else:
+        for a in range(len(lista)):
+            c = lista.count(numero)
+            if c == 1:
+                break
+        if c == 1:
+            print("Il numero è già presente nella lista, non è stato inserito.")
+            i = i - 1
+        else:
+            lista.append(numero) 
+    return lista    
+    
+#main
+l=lista()
+print("questa è la tua lista: ", l)
+"""

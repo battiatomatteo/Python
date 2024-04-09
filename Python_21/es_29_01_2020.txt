@@ -1,0 +1,53 @@
+#somma degli elementi di un array di numeri
+#acquisire da tastiera un array di interi con un num di componenti scelto dall'utente
+#sommare le sue componenti
+#stampare a video l'array e la somma delle sue componenti
+
+
+dimensione =0
+def chiedi_dimensione():
+    dimensione = int(input("Inserisci la dimensione del vettore:  "))
+    while dimensione <= 0:
+        dimensione = int(input("La dimensione non è valida. Reinseriscila:  "))
+    return dimensione
+
+def calcola_somma(dimensione, interi):
+    somma1=0
+    for i in range(dimensione):
+        somma1 += interi[i]
+    return somma1
+
+
+def carica_vettore(dimensione):
+    for i in range(dimensione):
+        num = int(input("Inserisci un numero:  "))
+        interi.append(num)
+
+
+#codice principale
+interi = []
+somma = 0
+
+
+#chiamata funzioni
+dimensione=chiedi_dimensione()  #assegno alla varibile dimensione il valore dato in input
+carica_vettore(dimensione)
+somma = calcola_somma(dimensione, interi)
+
+print(interi)
+print("la somma dei numeri del vettore è: ", somma)
+
+
+
+"""
+elementi = int(input("Inserire il numero degli elementi del vettore:  "))
+interi = []
+somma = 0
+for i in range(elementi):
+    num = int(input("Inserire il numero intero da inserire nel vettore:  "))
+    somma.append(num)
+    somma = somma + num
+
+print(interi)
+print("La somma dei numeri del vettore è:  ", somma)
+"""

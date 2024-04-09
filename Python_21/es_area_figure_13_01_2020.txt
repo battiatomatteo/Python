@@ -1,0 +1,22 @@
+#inserire la misura del lato di una figura geometrica e in base a questa visualizzare l'area
+
+#definizione
+
+def calcolaAree(l,nquad,ncerchi,ntriang):
+    #calcola le aree e tutte le figure e le somma
+    
+    areaquad = (l * l) * nquad 
+    areacerchi = (((l**2)*3.14)/2) * ncerchi 
+    areatriang = ((l * l) /2)* ntriang 
+    areatot = areaquad + areacerchi + areatriang 
+    print("\t") #va a capo
+    print("L'area totale è : ", str(areatot))
+
+#Programma
+l = eval(input("Inserisci il lato delle figure : "))
+nquad = int(input("Inserisci quanti quadrati sono presenti nella figura : "))
+ncerchi = int(input("Inserisci quanti cerchi sono presenti nella figura : "))
+ntriang = int(input("Inserisci quanti triangoli sono presenti nella figura : "))
+
+#Richiamo della definizione
+calcolaAree(l,nquad,ncerchi,ntriang)

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-12-14 09:03:55 "/>
+        <attribute name="created" value="YW5kcmU7TEFQVE9QLTg0UlVONTNWOzIwMjAtMTItMDE7IjA5OjIxOjUyICI7Mjc1Ng=="/>
+        <attribute name="edited" value="YW5kcmU7TEFQVE9QLTg0UlVONTNWOzIwMjAtMTItMTQ7IjA5OjAzOjU1ICI7MjsyODcy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Dati N numeri determinare il maggiore, il minore e la differenza tra i due."/>
+            <declare name="prec, num, minore, maggiore, diff, N, v" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <assign variable="prec" expression="0"/>
+            <assign variable="minore" expression="num"/>
+            <assign variable="maggiore" expression="num"/>
+            <for variable="v" start="1" end="N" direction="inc" step="1">
+                <input variable="num"/>
+                <if expression="num&gt;prec">
+                    <then>
+                        <assign variable="maggiore" expression="num"/>
+                        <assign variable="minore" expression="prec"/>
+                    </then>
+                    <else>
+                        <assign variable="maggiore" expression="prec"/>
+                        <assign variable="minore" expression="num"/>
+                    </else>
+                </if>
+            </for>
+            <assign variable="diff" expression="maggiore-minore"/>
+            <output expression="diff" newline="True"/>
+            <output expression="maggiore" newline="True"/>
+            <output expression="minore" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

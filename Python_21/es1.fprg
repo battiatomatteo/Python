@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-12-01 09:21:46 "/>
+        <attribute name="created" value="YW5kcmU7TEFQVE9QLTg0UlVONTNWOzIwMjAtMTItMDE7IjA5OjE0OjEwICI7Mjc1Mg=="/>
+        <attribute name="edited" value="YW5kcmU7TEFQVE9QLTg0UlVONTNWOzIwMjAtMTItMDE7IjA5OjIxOjQ2ICI7MTsyODY3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Data una serie di numeri terminante con 0 visualizzare quanti sono i pari e quanti i dispari."/>
+            <declare name="pari, dis, num, ris, resto" type="Integer" array="False" size=""/>
+            <input variable="num"/>
+            <assign variable="dis" expression="0"/>
+            <assign variable="pari" expression="0"/>
+            <while expression="num!=0">
+                <assign variable="ris" expression="num/2"/>
+                <assign variable="resto" expression="num-(ris*2)"/>
+                <if expression="resto==0">
+                    <then>
+                        <assign variable="pari" expression="pari+1"/>
+                    </then>
+                    <else>
+                        <assign variable="dis" expression="dis+1"/>
+                    </else>
+                </if>
+                <input variable="num"/>
+            </while>
+            <output expression="pari" newline="True"/>
+            <output expression="dis" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

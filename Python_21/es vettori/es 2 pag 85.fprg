@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="andre"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-01-22 03:27:08 "/>
+        <attribute name="created" value="YW5kcmU7TEFQVE9QLTg0UlVONTNWOzIwMjEtMDEtMjI7IjAyOjQzOjAyICI7Mjc1MA=="/>
+        <attribute name="edited" value="YW5kcmU7TEFQVE9QLTg0UlVONTNWOzIwMjEtMDEtMjI7IjAzOjA0OjMyICI7MTsyODU5"/>
+        <attribute name="edited" value="cmFkdXg7REVTS1RPUC0xT0s1MDZPOzIwMjEtMDEtMjI7IjAzOjI3OjA4ICI7MTsyODYx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="v, num, ris, resto, x, y" type="Integer" array="False" size=""/>
+            <declare name="vettorep" type="Real" array="True" size="31"/>
+            <declare name="vettored" type="Real" array="True" size="31"/>
+            <assign variable="x" expression="-1"/>
+            <assign variable="y" expression="-1"/>
+            <for variable="v" start="1" end="31" direction="inc" step="1">
+                <output expression="&quot;inserire un numero&quot;" newline="True"/>
+                <assign variable="num" expression="Random(100)"/>
+                <assign variable="ris" expression="num/2"/>
+                <assign variable="resto" expression="num-(ris*2)"/>
+                <if expression="resto==0">
+                    <then>
+                        <assign variable="y" expression="y+1"/>
+                        <assign variable="vettorep[y]" expression="num"/>
+                    </then>
+                    <else>
+                        <assign variable="x" expression="x+1"/>
+                        <assign variable="vettored[x]" expression="num"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
